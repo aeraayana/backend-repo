@@ -96,11 +96,17 @@ public static class ArticleEndpoints
         });
 
         // DELETE /article/id/
-        group.MapDelete("/{id}/", async (int id, SharingVisionContext dbContext) =>
+         group.MapPatch("/{id}/", async (int id, UpdateArticle updatedArticle, SharingVisionContext dbContext) =>
         {
-            await dbContext.Articles
-                .Where(article => article.Id == id)
-                .ExecuteDeleteAsync();
+            var existingArticle = await dbContext.Articles.FindAsync(id);
+
+            if (existingArticle is null){
+                return Results.NotFound();
+            }
+
+            existingArticle.StatusId = 3;
+
+            await dbContext.SaveChangesAsync();
 
             return Results.NoContent();
         });
