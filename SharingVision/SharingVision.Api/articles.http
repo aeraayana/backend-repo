@@ -1,0 +1,45 @@
+GET http://localhost:5184/article/1/5
+
+###
+GET http://localhost:5184/article/1
+
+###
+POST http://localhost:5184/article
+Content-Type: application/json
+
+{
+    "Title": "Now Human",
+    "Content": "Detroit is under fire by rogue AIs. the town is in complete disarray, but a thrown away comfort robot by the name of Ai suddenly starts shedding tears. 'have I gained consciousnes...?",
+    "Category": "Fantasy",
+    "StatusId": 2
+}
+
+###
+PUT http://localhost:5184/article/3
+Content-Type: application/json
+
+{
+    "Title": "King of the Hill",
+    "Content": "A story book about a nameless girl whose name has been lost the moment their parents sold her off to slavery to fight in the colosseum. follow her journey as she fights her way to reclaim her name",
+    "Category": "Fantasy, Action",
+    "StatusId": 3
+}
+
+###
+DELETE http://localhost:5184/article/3
+
+###
+PUT http://localhost:5184/article/7
+Content-Type: application/json
+
+{
+    "Title": "Street Fighter V",
+    "Content": "Follow Ryu as he vanquishes his inner demons in controlling his Qi",
+    "Category": "Action",
+    "Created_date": "2022-04-12",
+    "Updated_date": "2025-07-07",
+    "Status": "Published"
+}
+
+###
+GET http://localhost:5184/status/
