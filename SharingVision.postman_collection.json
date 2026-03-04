@@ -1,0 +1,128 @@
+{
+  "info": {
+    "_postman_id": "ba1f9df7-7ff9-4733-a0b8-4dba249f58a3",
+    "name": "SharingVision",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52890610",
+    "_collection_link": "https://go.postman.co/collection/52890610-ba1f9df7-7ff9-4733-a0b8-4dba249f58a3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GetArticle",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:5148/article/{{index}}/{{offset}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "5148",
+          "path": [
+            "article",
+            "{{index}}",
+            "{{offset}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetArticleById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:5148/article/{{$randomInt}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "5148",
+          "path": [
+            "article",
+            "{{$randomInt}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateArticle",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Title\": \"King of the Hill\",\r\n    \"Content\": \"A story book about a nameless girl whose name has been lost the moment their parents sold her off to slavery to fight in the colosseum. follow her journey as she fights her way to reclaim her name\",\r\n    \"Category\": \"Fantasy, Action\",\r\n    \"StatusId\": 3\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5148/article/{{$randomInt}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "5148",
+          "path": [
+            "article",
+            "{{$randomInt}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PostArticle",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Title\": \"Now Human\",\r\n    \"Content\": \"Detroit is under fire by rogue AIs. the town is in complete disarray, but a thrown away comfort robot by the name of Ai suddenly starts shedding tears. 'have I gained consciousnes...?\",\r\n    \"Category\": \"Fantasy\",\r\n    \"StatusId\": 2\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5148/article",
+          "host": [
+            "localhost"
+          ],
+          "port": "5148",
+          "path": [
+            "article"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteArticleById",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Title\": \"King of the Hill\",\r\n    \"Content\": \"A story book about a nameless girl whose name has been lost the moment their parents sold her off to slavery to fight in the colosseum. follow her journey as she fights her way to reclaim her name\",\r\n    \"Category\": \"Fantasy, Action\",\r\n    \"StatusId\": 3\r\n}\r\n"
+        },
+        "url": {
+          "raw": "localhost:5148/article/{{$randomInt}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "5148",
+          "path": [
+            "article",
+            "{{$randomInt}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
