@@ -96,7 +96,7 @@ public static class ArticleEndpoints
         });
 
         // DELETE /article/id/
-         group.MapPatch("/{id}/", async (int id, UpdateArticle updatedArticle, SharingVisionContext dbContext) =>
+         group.MapPatch("/{id}/", async (int id, SharingVisionContext dbContext) =>
         {
             var existingArticle = await dbContext.Articles.FindAsync(id);
 
