@@ -5,4 +5,4 @@ Database is migrated using ef and schema can be seen in SharingVision.Api/Models
 
 `dotnet ef database update` to commit changes in pending migrations table
 
-password for DB is localhost user root, made in mysql.
+DB credentials are: `-u root -p localhost` using mySQL.
